@@ -49,7 +49,6 @@
             <th>ID</th>
             <th>Name</th>
             <th>Experience</th>
-            <th>Service name</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -59,7 +58,6 @@
             <td>{{ professional[0] }}</td>
             <td>{{ professional[1] }}</td>
             <td>{{ professional[2] }}</td>
-            <td>{{ professional[3] }}</td>
             <td>
                 <a href="{{ url_for('edit_professional', id=professional[0]) }}" class="btn btn-warning">Edit</a>
                 {% if professional[9] == None %}
@@ -106,7 +104,7 @@
             <td>{{ request[1] }}</td>
             <td>{{ request[2] }}</td>
             <td>{{ request[3] }}</td>
-            <td>{{ request[4] }}</td>
+            <td>{{ request[6] }}</td>
         </tr>
         {% endfor %}
     </tbody>

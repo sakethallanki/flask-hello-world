@@ -120,7 +120,10 @@ def login():
             session['user_id'] = user['id'] 
             flash('Login successful.')
             if user['role'] == "professional":
-                return redirect(url_for('professional_dashboard'))
+                if user['status']=="accepted":
+                    return redirect(url_for('professional_dashboard'))
+                else:
+                    flash('You are not approved yet, please check with admin! Thank you.')
             else:
                 return redirect(url_for('customer_dashboard'))
         else:
@@ -248,7 +251,17 @@ def professionalsignup():
 
 @app.route('/edit_professional/<int:id>', methods=['GET', 'POST'])
 def edit_professional(id):
+    conn = get_db_connection()
+    
+    # Fetch services from the database
+    services = conn.execute('SELECT id, name FROM service').fetchall()
+    conn.close()
+
+    # Prepare the choices for the SelectField
+    service_choices = [(str(service['id']), service['name']) for service in services]
     form = ProfessionalSignUp()  # Instantiate the form object
+    form.servicename.choices = service_choices
+    
     conn = get_db_connection()
 
     # Fetch the existing professional data
