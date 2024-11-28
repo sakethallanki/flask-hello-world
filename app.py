@@ -78,17 +78,18 @@ def init_db():
         ''')
         conn.execute('''  
             CREATE TABLE IF NOT EXISTS service_request (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    service_id INTEGER,
-    customer_id INTEGER,
-    professional_id INTEGER,
-    date_of_request TEXT DEFAULT CURRENT_TIMESTAMP,
-    date_of_completion TEXT,
-    service_status TEXT DEFAULT 'requested',
-    remarks TEXT,
-    FOREIGN KEY (service_id) REFERENCES service(id),
-    FOREIGN KEY (customer_id) REFERENCES user(id),
-    FOREIGN KEY (professional_id) REFERENCES user(id)
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                service_id INTEGER,
+                customer_id INTEGER,
+                professional_id INTEGER,
+                date_of_request TEXT DEFAULT CURRENT_TIMESTAMP,
+                date_of_completion TEXT,
+                service_status TEXT DEFAULT 'requested',
+                remarks TEXT,
+                rating INTEGER,
+                FOREIGN KEY (service_id) REFERENCES service(id),
+                FOREIGN KEY (customer_id) REFERENCES user(id),
+                FOREIGN KEY (professional_id) REFERENCES user(id)
             )  
         ''')
 
@@ -115,9 +116,13 @@ def login():
             'SELECT * FROM user WHERE username = ? AND password = ?', (username, password)).fetchone()
         conn.close()
 
-        if user:
+        if user:   
+            session['user_id'] = user['id'] 
             flash('Login successful.')
-            return redirect(url_for('home'))
+            if user['role'] == "professional":
+                return redirect(url_for('professional_dashboard'))
+            else:
+                return redirect(url_for('customer_dashboard'))
         else:
             flash('Login Unsuccessful. Please check username and password')
 
@@ -169,8 +174,7 @@ class ProfessionalSignUp(FlaskForm):
     username = EmailField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     fullname = StringField('Fullname')
-    servicename = SelectField('Service Name', choices=[('service1', 'Service 1'), ('service2', 'Service 2')],
-                              validators=[DataRequired()], default='service1')
+    servicename = SelectField('Service Name',validators=[DataRequired()])
     fileUpload = FileField('Upload Signed PDF', validators=[DataRequired()])
     description = TextAreaField('Address')
     experience = IntegerField('Experience', validators=[
@@ -182,7 +186,18 @@ class ProfessionalSignUp(FlaskForm):
 
 @app.route('/professionalsignup', methods=['GET', 'POST'])
 def professionalsignup():
+    
+    conn = get_db_connection()
+    
+    # Fetch services from the database
+    services = conn.execute('SELECT id, name FROM service').fetchall()
+    conn.close()
+
+    # Prepare the choices for the SelectField
+    service_choices = [(str(service['id']), service['name']) for service in services]
+    
     form = ProfessionalSignUp()  # Instantiate the form object
+    form.servicename.choices = service_choices
     app.logger.debug("ousite profe condition")
     if form.validate_on_submit():  # If the form is valid on submission
         app.logger.debug("inside profe condition")
@@ -315,10 +330,20 @@ def admin_dashboard():
     services = conn.execute('SELECT * FROM service').fetchall()
     professionals = conn.execute(
         'SELECT * FROM user WHERE role = ?', ('professional',)).fetchall()
+    # Fetch service requests and related data (e.g., service name, professional, and customer names)
+    service_requests = conn.execute('''
+        SELECT sr.id, s.name AS service_name, u.fullname AS professional_name, 
+               u2.fullname AS customer_name, sr.service_status 
+        FROM service_request sr
+        JOIN service s ON sr.service_id = s.id
+        JOIN user u ON sr.professional_id = u.id
+        JOIN user u2 ON sr.customer_id = u2.id
+    ''').fetchall()
+    service_requests = conn.execute('SELECT * FROM service_request').fetchall()
     for professional in professionals:
         app.logger.debug(professional[3])
     conn.close()
-    return render_template('admin/admin_dashboard.html', services=services, professionals=professionals)
+    return render_template('admin/admin_dashboard.html', services=services, professionals=professionals, service_requests=service_requests)
 
 
 @app.route('/accept_professional/<int:id>', methods=['GET', 'POST'])
@@ -511,14 +536,14 @@ def summary():
 
 @app.route('/logout')
 def logout():
-    session.pop('user_id', None)  # Remove user from session
-    return redirect(url_for('login'))  # Redirect to login page
+    session.clear()
+    return redirect(url_for('login'))
 
 
 @app.route('/professional/dashboard', methods=['GET'])
 def professional_dashboard():
     user_id = session.get('user_id')  # Get logged-in user's ID
-
+    app.logger.debug("The user id of the professional is: "+str(user_id))
     conn = get_db_connection()
 
     # Get all service requests with status 'requested' for this professional
@@ -527,8 +552,8 @@ def professional_dashboard():
         FROM service_request sr
         JOIN service s ON sr.service_id = s.id
         JOIN user c ON sr.customer_id = c.id
-        WHERE sr.professional_id = ? AND sr.service_status = 'requested'
-    ''', (user_id,)).fetchall()
+        WHERE c.role='customer'  AND sr.service_status = 'requested'
+    ''').fetchall()
 
     # Get accepted service requests (for historical purposes)
     accepted_services = conn.execute('''
@@ -569,9 +594,11 @@ def professional_dashboard():
 
 @app.route('/accept_service/<int:id>', methods=['POST'])
 def accept_service(id):
+    user_id = session.get('user_id')
     conn = get_db_connection()
     conn.execute(
-        'UPDATE service_request SET service_status = "accepted" WHERE id = ?', (id,))
+        'UPDATE service_request SET service_status = "accepted", professional_id = ? WHERE id = ?',
+        (user_id, id))
     conn.commit()
     conn.close()
     flash('Service has been accepted!', 'success')
@@ -582,7 +609,8 @@ def accept_service(id):
 def reject_service(id):
     conn = get_db_connection()
     conn.execute(
-        'UPDATE service_request SET service_status = "rejected" WHERE id = ?', (id,))
+        'UPDATE service_request SET service_status = "rejected", professional_id = ? WHERE id = ?',
+        (user_id, id))
     conn.commit()
     conn.close()
     flash('Service has been rejected!', 'danger')
@@ -593,7 +621,8 @@ def reject_service(id):
 def close_service(id):
     conn = get_db_connection()
     conn.execute(
-        'UPDATE service_request SET service_status = "closed" WHERE id = ?', (id,))
+        'UPDATE service_request SET service_status = "closed" , customer_id = ? WHERE id = ?',
+        (user_id, id))
     conn.commit()
     conn.close()
     flash('Service has been closed!', 'success')
@@ -673,25 +702,21 @@ def customer_dashboard():
     services = conn.execute('SELECT * FROM service').fetchall()
 
     # Fetch service history for the logged-in customer (assuming user_id is available)
-    user_id = 1  # Replace this with actual logged-in user ID
+    user_id = session.get('user_id')
+    app.logger.debug("The user id of customer is: "+str(user_id))
     service_history = conn.execute('''SELECT sr.id, s.name AS service_name, u.fullname AS professional_name, sr.service_status 
                                       FROM service_request sr
                                       JOIN service s ON sr.service_id = s.id
                                       LEFT JOIN user u ON sr.professional_id = u.id
                                       WHERE sr.customer_id = ?''', (user_id,)).fetchall()
-
     conn.close()
-
     return render_template('customer/dashboard.html', services=services, service_history=service_history, form=ServiceRemarkForm())
 
 
 @app.route('/book_service', methods=['POST'])
 def book_service():
     service_id = request.form['service_id']
-
-    # Assuming user is logged in, and you have user_id available
-    user_id = 1  # Replace with actual logged-in user ID
-
+    user_id = session.get('user_id')  # Get logged-in user's ID
     # Insert into service_request table
     conn = get_db_connection()
     conn.execute('''INSERT INTO service_request (service_id, customer_id, service_status) 
@@ -703,15 +728,14 @@ def book_service():
     return redirect(url_for('customer_dashboard'))
 
 
-@app.route('/customer/dashboard')
-def dashboard():
-    form = ServiceRemarkForm()  # Create an instance of the form
-    with get_db_connection() as conn:
-        services = conn.execute('SELECT * FROM service').fetchall()
-        # Replace 1 with the actual customer ID
-        service_history = conn.execute(
-            'SELECT * FROM service_request WHERE customer_id = ?', (1,)).fetchall()
-    return render_template('customer/dashboard.html', services=services, service_history=service_history, form=form)
+# @app.route('/customer/dashboard')
+# def dashboard():
+#     form = ServiceRemarkForm()  # Create an instance of the form
+#     with get_db_connection() as conn:
+#         services = conn.execute('SELECT * FROM service').fetchall()
+#         service_history = conn.execute(
+#             'SELECT * FROM service_request WHERE customer_id = ?', (session.get('user_id'),)).fetchall()
+#     return render_template('customer/dashboard.html', services=services, service_history=service_history, form=form)
 
 
 @app.route('/customer/search', methods=['GET', 'POST'])
@@ -783,6 +807,41 @@ def customer_summary():
 
     # Render the HTML template and pass the base64-encoded image
     return render_template('customer/customer_summary.html', plot_url=plot_url)
+
+@app.route('/close_service_request/<int:service_request_id>', methods=['POST'])
+def close_service_request(service_request_id):
+    remarks = request.form['remarks']
+    rating = request.form['rating']
+
+    # Assuming user is logged in and you have user_id available
+    user_id = session.get('user_id')  # Get logged-in user's ID
+
+    # Update the service request in the database with remarks and rating
+    conn = get_db_connection()
+    conn.execute('''UPDATE service_request 
+                    SET service_status = 'closed', remarks = ?, rating = ? 
+                    WHERE id = ? AND customer_id = ?''', 
+                    (remarks, rating, service_request_id, user_id))
+    app.logger.debug("values setted to it 11")
+    conn.commit()
+    conn.close()
+    
+    # conn = get_db_connection()
+    # conn.execute(
+    #     '''UPDATE service_request SET service_status = 'closed' , customer_id = ? WHERE id = ?''',
+    #     (user_id, id))
+    # conn.commit()
+    # conn.close()
+
+    # conn = get_db_connection()
+    # status = conn.execute(
+    #         '''SELECT service_status, remarks, rating FROM service_request WHERE id = ? AND customer_id = ? ''', 
+    #                 (service_request_id, user_id)).fetchone()
+    # conn.close()
+    # app.logger.debug('the status is: '+str(status[0])+str(status[1])+str(status[2]))
+    
+    # Redirect the user to the customer dashboard or service history page
+    return redirect(url_for('customer_dashboard'))  # Or another appropriate route
 
 
 if __name__ == "__main__":

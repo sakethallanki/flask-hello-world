@@ -1,60 +1,79 @@
-{% extends 'customer/base.html' %}  
+{% extends 'customer/base.html' %}
 
-{% block content %}  
-<h1>Welcome to Customer Dashboard</h1>  
+{% block content %}
+<h1>Welcome to Customer Dashboard</h1>
 
-<h2>Best Cleaning Packages</h2>  
-<table>  
-    <tr>  
-        <th>ID</th>  
-        <th>Service Name</th>  
-        <th>Price</th>  
-        <th>Action</th>  
-    </tr>  
-    {% for service in services %}  
-    <tr>  
-        <td>{{ service.id }}</td>  
-        <td>{{ service.name }}</td>  
-        <td>${{ service.price }}</td>  
-        <!-- Add form to handle booking -->
-        <td>
-            <form method="POST" action="{{ url_for('book_service') }}">
-                <input type="hidden" name="service_id" value="{{ service.id }}">
-                <button type="submit">Book</button>
-            </form>
-        </td>  
-    </tr>  
-    {% endfor %}  
-</table>  
+<head>
+    <script>
+        function toggleRemarksForm(serviceRequestId) {
+            var form = document.getElementById('remarks-form-' + serviceRequestId);
+            if (form) {
+                if (form.style.display === 'none' || form.style.display === '') {
+                    form.style.display = 'block';
+                } else {
+                    form.style.display = 'none';
+                }
+            } else {
+                console.error('Form with ID remarks-form-' + serviceRequestId + ' does not exist.');
+            }
+        }  
+    </script>
+</head>
 
-<h2>Service History</h2>  
-<table>  
-    <tr>  
-        <th>ID</th>  
-        <th>Service Name</th>  
-        <th>Professional Name</th>  
-        <th>Status</th>  
-    </tr>  
-    {% for history in service_history %}  
-    <tr>  
-        <td>{{ history.id }}</td>  
-        <td>{{ history.service_name }}</td>  
-        <td>{{ history.professional_name }}</td>  
-        <td>{{ history.service_status }}</td>  
-    </tr>  
-    {% endfor %}  
-</table>  
+<body>
+    <h2>Best Cleaning Packages</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Service Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        {% for service in services %}
+        <tr>
+            <td>{{ service.id }}</td>
+            <td>{{ service.name }}</td>
+            <td>${{ service.price }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('book_service') }}">
+                    <input type="hidden" name="service_id" value="{{ service.id }}">
+                    <button type="submit">Book</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
 
-<h2>Service Remarks</h2>  
-<form method="POST" action="{{ url_for('submit_remark') }}">  
-    {{ form.hidden_tag() }}  
-    <label for="service_id">Select Service:</label>  
-    {{ form.service_id() }}<br>  
-    <label for="remarks">Remarks:</label>  
-    {{ form.remarks() }}<br>  
-    <label for="rating">Rating:</label>  
-    {{ form.rating() }}<br>  
-    {{ form.submit() }}  
-</form>  
-
+    <h2>Service History</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Service Name</th>
+            <th>Professional Name</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        {% for history in service_history %}
+        <tr>
+            <td>{{ history.id }}</td>
+            <td>{{ history.service_name }}</td>
+            <td>{{ history.professional_name }}</td>
+            <td>{{ history.service_status }}</td>
+            <td>
+                {% if history.service_status == 'accepted' %}
+                <button type="button" onclick="toggleRemarksForm('{{ history.id }}')">Close</button>
+                <div id="remarks-form-{{ history.id }}" style="display:none;">
+                    <form method="POST" action="{{ url_for('close_service_request', service_request_id=history.id) }}">
+                        <textarea name="remarks" placeholder="Enter your remarks"></textarea><br>
+                        <label for="rating">Rating (out of 5):</label>
+                        <input type="number" name="rating" min="1" max="5"><br>
+                        <button type="submit">Submit Remarks</button>
+                    </form>
+                </div>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
 {% endblock %}

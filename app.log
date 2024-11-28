@@ -312,3 +312,195 @@
 2024-11-28 07:46:20,255 - DEBUG - outside the if codition
 2024-11-28 07:46:30,339 - DEBUG - outside the if codition
 2024-11-28 07:46:30,340 - DEBUG - inside the if codition
+2024-11-28 11:19:52,356 - DEBUG - ousite profe condition
+2024-11-28 11:20:59,471 - DEBUG - ousite profe condition
+2024-11-28 11:20:59,471 - DEBUG - inside profe condition
+2024-11-28 11:20:59,471 - DEBUG - gonna save file inside profe condition
+2024-11-28 11:20:59,471 - DEBUG - Username: professional1@gmail.com
+2024-11-28 11:20:59,471 - DEBUG - Password: professional1
+2024-11-28 11:20:59,471 - DEBUG - Fullname: professional1
+2024-11-28 11:20:59,471 - DEBUG - Description: Professional
+2024-11-28 11:20:59,471 - DEBUG - Pincode: 563289
+2024-11-28 11:20:59,471 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-28 11:20:59,471 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-28 11:20:59,472 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-28 11:20:59,472 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-28 11:20:59,472 - DEBUG - to save in table
+2024-11-28 11:20:59,499 - DEBUG - saved in table
+2024-11-28 11:24:50,829 - DEBUG - The user id of the professional is: 1
+2024-11-28 11:29:36,475 - DEBUG - professional1
+2024-11-28 11:29:50,254 - DEBUG - professional1
+2024-11-28 11:30:26,598 - DEBUG - The user id of the professional is: 1
+2024-11-28 11:30:55,813 - DEBUG - The user id of the professional is: 1
+2024-11-28 11:54:18,735 - DEBUG - ousite profe condition
+2024-11-28 11:55:06,815 - DEBUG - ousite profe condition
+2024-11-28 11:55:06,815 - DEBUG - inside profe condition
+2024-11-28 11:55:06,815 - DEBUG - gonna save file inside profe condition
+2024-11-28 11:55:06,815 - DEBUG - Username: professional2@gmail.com
+2024-11-28 11:55:06,815 - DEBUG - Password: professional2
+2024-11-28 11:55:06,816 - DEBUG - Fullname: professional2
+2024-11-28 11:55:06,816 - DEBUG - Description: hyd
+2024-11-28 11:55:06,816 - DEBUG - Pincode: 425638
+2024-11-28 11:55:06,816 - DEBUG - Servicename: 1 and type: <class 'str'>
+2024-11-28 11:55:06,816 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-28 11:55:06,816 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-28 11:55:06,816 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-28 11:55:06,816 - DEBUG - to save in table
+2024-11-28 11:55:06,853 - DEBUG - saved in table
+2024-11-28 11:55:17,813 - DEBUG - The user id of the professional is: 3
+2024-11-28 12:11:19,025 - DEBUG - The user id of customer is: 2
+2024-11-28 12:11:26,504 - DEBUG - The user id of customer is: 2
+2024-11-28 12:12:03,295 - DEBUG - The user id of customer is: 2
+2024-11-28 12:12:10,327 - DEBUG - The user id of customer is: 2
+2024-11-28 12:12:25,522 - DEBUG - The user id of customer is: 2
+2024-11-28 12:14:38,618 - DEBUG - The user id of customer is: 2
+2024-11-28 12:14:46,907 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:14:58,944 - DEBUG - professional1
+2024-11-28 12:14:58,945 - DEBUG - professional2
+2024-11-28 12:15:05,578 - DEBUG - professional1
+2024-11-28 12:15:05,578 - DEBUG - professional2
+2024-11-28 12:16:02,832 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:19:52,345 - DEBUG - professional1
+2024-11-28 12:19:52,345 - DEBUG - professional2
+2024-11-28 12:19:57,886 - DEBUG - professional1
+2024-11-28 12:19:57,886 - DEBUG - professional2
+2024-11-28 12:23:09,897 - DEBUG - professional1
+2024-11-28 12:23:09,898 - DEBUG - professional2
+2024-11-28 12:28:23,145 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:28:37,624 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:35:19,095 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:35:22,626 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:35:26,695 - DEBUG - The user id of customer is: 2
+2024-11-28 12:35:31,905 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:36:19,326 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:41:03,938 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:41:06,323 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:42:07,802 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:43:14,053 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:43:17,397 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:45:12,861 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:45:16,440 - DEBUG - The user id of the professional is: 2
+2024-11-28 12:46:54,550 - DEBUG - The user id of customer is: 2
+2024-11-28 12:52:21,157 - DEBUG - The user id of customer is: 2
+2024-11-28 12:52:26,487 - DEBUG - The user id of customer is: 2
+2024-11-28 13:00:40,394 - DEBUG - The user id of customer is: 2
+2024-11-28 13:00:59,405 - DEBUG - The user id of customer is: 2
+2024-11-28 13:01:58,807 - DEBUG - The user id of customer is: 2
+2024-11-28 13:07:26,796 - DEBUG - The user id of customer is: 2
+2024-11-28 13:07:27,607 - DEBUG - The user id of customer is: 2
+2024-11-28 13:08:20,519 - DEBUG - The user id of customer is: 2
+2024-11-28 13:08:44,206 - DEBUG - The user id of customer is: 2
+2024-11-28 13:23:56,675 - DEBUG - The user id of customer is: 2
+2024-11-28 13:37:42,723 - DEBUG - The user id of customer is: 2
+2024-11-28 13:41:58,293 - DEBUG - The user id of customer is: 2
+2024-11-28 14:20:13,169 - DEBUG - The user id of customer is: 2
+2024-11-28 14:21:55,399 - DEBUG - The user id of customer is: 2
+2024-11-28 14:23:59,786 - DEBUG - The user id of customer is: 2
+2024-11-28 14:24:02,853 - DEBUG - The user id of customer is: 2
+2024-11-28 14:25:10,743 - DEBUG - The user id of customer is: 2
+2024-11-28 14:25:42,882 - DEBUG - The user id of customer is: 2
+2024-11-28 14:27:24,937 - DEBUG - The user id of customer is: None
+2024-11-28 14:27:28,108 - DEBUG - The user id of customer is: None
+2024-11-28 14:27:32,374 - DEBUG - The user id of customer is: None
+2024-11-28 14:27:33,267 - DEBUG - The user id of customer is: None
+2024-11-28 14:27:35,365 - DEBUG - The user id of customer is: None
+2024-11-28 14:27:37,478 - DEBUG - The user id of customer is: None
+2024-11-28 14:28:01,087 - DEBUG - The user id of customer is: None
+2024-11-28 14:28:02,991 - DEBUG - The user id of customer is: None
+2024-11-28 14:28:04,663 - DEBUG - The user id of customer is: None
+2024-11-28 14:28:17,563 - DEBUG - The user id of customer is: None
+2024-11-28 14:28:19,144 - DEBUG - The user id of customer is: None
+2024-11-28 14:28:36,372 - DEBUG - The user id of customer is: None
+2024-11-28 14:28:38,110 - DEBUG - The user id of customer is: None
+2024-11-28 14:28:51,395 - DEBUG - The user id of customer is: None
+2024-11-28 14:28:53,245 - DEBUG - The user id of customer is: None
+2024-11-28 14:29:19,674 - DEBUG - The user id of customer is: None
+2024-11-28 14:29:21,702 - DEBUG - The user id of customer is: None
+2024-11-28 14:31:25,714 - DEBUG - The user id of customer is: 2
+2024-11-28 14:36:20,244 - DEBUG - The user id of customer is: 2
+2024-11-28 14:38:38,204 - DEBUG - The user id of customer is: 2
+2024-11-28 14:40:04,387 - DEBUG - The user id of customer is: 2
+2024-11-28 14:41:34,825 - DEBUG - The user id of customer is: 2
+2024-11-28 14:47:39,355 - DEBUG - outside the if codition
+2024-11-28 14:47:48,671 - DEBUG - outside the if codition
+2024-11-28 14:47:48,672 - DEBUG - inside the if codition
+2024-11-28 15:16:44,975 - DEBUG - The user id of the professional is: 2
+2024-11-28 15:17:09,037 - DEBUG - ousite profe condition
+2024-11-28 15:17:48,174 - DEBUG - ousite profe condition
+2024-11-28 15:17:48,174 - DEBUG - inside profe condition
+2024-11-28 15:17:48,174 - DEBUG - gonna save file inside profe condition
+2024-11-28 15:17:48,176 - DEBUG - Username: p1@gmail.com
+2024-11-28 15:17:48,176 - DEBUG - Password: p1
+2024-11-28 15:17:48,176 - DEBUG - Fullname: p1
+2024-11-28 15:17:48,176 - DEBUG - Description: p1add
+2024-11-28 15:17:48,176 - DEBUG - Pincode: 563286
+2024-11-28 15:17:48,176 - DEBUG - Servicename: 1 and type: <class 'str'>
+2024-11-28 15:17:48,176 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-28 15:17:48,177 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-28 15:17:48,177 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-28 15:17:48,177 - DEBUG - to save in table
+2024-11-28 15:17:48,227 - DEBUG - saved in table
+2024-11-28 15:18:16,507 - DEBUG - The user id of the professional is: 1
+2024-11-28 15:21:19,502 - DEBUG - The user id of customer is: 2
+2024-11-28 15:21:22,200 - DEBUG - The user id of customer is: 2
+2024-11-28 15:21:27,626 - DEBUG - The user id of the professional is: 2
+2024-11-28 15:21:29,872 - DEBUG - The user id of the professional is: 2
+2024-11-28 15:21:33,966 - DEBUG - The user id of customer is: 2
+2024-11-28 15:21:46,031 - DEBUG - The user id of customer is: 2
+2024-11-28 15:24:18,931 - DEBUG - The user id of customer is: 2
+2024-11-28 15:24:29,879 - DEBUG - The user id of customer is: 2
+2024-11-28 15:24:39,766 - DEBUG - The user id of customer is: 2
+2024-11-28 15:25:34,744 - DEBUG - The user id of customer is: 2
+2024-11-28 15:25:39,185 - DEBUG - The user id of customer is: 2
+2024-11-28 15:25:49,541 - DEBUG - values setted to it
+2024-11-28 15:25:49,577 - DEBUG - The user id of customer is: 2
+2024-11-28 15:30:42,532 - DEBUG - values setted to it
+2024-11-28 15:30:42,562 - DEBUG - The user id of customer is: 2
+2024-11-28 15:40:05,127 - DEBUG - The user id of customer is: 2
+2024-11-28 15:40:14,056 - DEBUG - values setted to it
+2024-11-28 15:41:03,601 - DEBUG - The user id of customer is: 2
+2024-11-28 15:41:10,137 - DEBUG - values setted to it
+2024-11-28 15:41:44,776 - DEBUG - The user id of the professional is: 2
+2024-11-28 15:42:06,929 - DEBUG - The user id of customer is: 2
+2024-11-28 15:42:14,984 - DEBUG - values setted to it
+2024-11-28 15:42:14,985 - DEBUG - the status is: <sqlite3.Row object at 0x7f0bf571c790>
+2024-11-28 15:42:15,014 - DEBUG - The user id of customer is: 2
+2024-11-28 15:43:38,783 - DEBUG - The user id of customer is: 2
+2024-11-28 15:43:49,070 - DEBUG - values setted to it
+2024-11-28 15:43:49,071 - DEBUG - the status is: accepted
+2024-11-28 15:43:49,099 - DEBUG - The user id of customer is: 2
+2024-11-28 15:44:57,012 - DEBUG - The user id of customer is: 2
+2024-11-28 15:48:43,284 - DEBUG - The user id of customer is: 2
+2024-11-28 15:48:55,970 - DEBUG - values setted to it
+2024-11-28 15:48:56,022 - DEBUG - The user id of customer is: 2
+2024-11-28 15:55:36,975 - DEBUG - The user id of customer is: 2
+2024-11-28 15:55:42,949 - DEBUG - values setted to it 1
+2024-11-28 15:55:43,068 - DEBUG - The user id of customer is: 2
+2024-11-28 15:57:09,475 - DEBUG - The user id of customer is: 2
+2024-11-28 15:57:18,694 - DEBUG - values setted to it 1
+2024-11-28 15:57:18,694 - DEBUG - the status is: acceptedNoneNone
+2024-11-28 15:57:18,734 - DEBUG - The user id of customer is: 2
+2024-11-28 16:00:34,976 - DEBUG - The user id of customer is: 2
+2024-11-28 16:02:17,228 - DEBUG - The user id of customer is: 2
+2024-11-28 16:11:56,450 - DEBUG - The user id of customer is: 2
+2024-11-28 16:12:04,637 - DEBUG - values setted to it 1
+2024-11-28 16:12:04,637 - DEBUG - the status is: acceptedNoneNone
+2024-11-28 16:12:04,699 - DEBUG - The user id of customer is: 2
+2024-11-28 16:12:42,027 - DEBUG - p1
+2024-11-28 16:12:54,876 - DEBUG - p1
+2024-11-28 16:16:29,582 - DEBUG - The user id of customer is: None
+2024-11-28 16:16:31,351 - DEBUG - The user id of customer is: None
+2024-11-28 16:16:36,625 - DEBUG - The user id of customer is: None
+2024-11-28 16:16:39,991 - DEBUG - The user id of customer is: None
+2024-11-28 16:16:42,801 - DEBUG - The user id of customer is: None
+2024-11-28 16:17:34,086 - DEBUG - p1
+2024-11-28 16:17:40,174 - DEBUG - The user id of customer is: None
+2024-11-28 16:17:42,281 - DEBUG - The user id of customer is: None
+2024-11-28 16:19:10,056 - DEBUG - The user id of customer is: 2
+2024-11-28 16:19:24,904 - DEBUG - The user id of customer is: 2
+2024-11-28 16:21:20,457 - DEBUG - The user id of customer is: 2
+2024-11-28 16:23:03,190 - DEBUG - The user id of customer is: 2
+2024-11-28 16:23:10,406 - DEBUG - values setted to it 11
+2024-11-28 16:23:10,495 - DEBUG - The user id of customer is: 2
+2024-11-28 16:23:32,303 - DEBUG - The user id of customer is: 2
+2024-11-28 16:23:34,173 - DEBUG - The user id of customer is: 2
