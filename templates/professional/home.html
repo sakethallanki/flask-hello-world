@@ -1,0 +1,121 @@
+{% extends 'professional/professional_dashboard.html' %}
+<h1>Welcome to Your Dashboard</h1>
+
+    <h2>Requested Services</h2>
+    {% if requested_services %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Customer Name</th>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for service in requested_services %}
+                    <tr>
+                        <td>{{ service.service_name }}</td>
+                        <td>{{ service.customer_name }}</td>
+                        <td>{{ service.date_of_request }}</td>
+                        <td>{{ service.service_status }}</td>
+                        <td>
+                            <form action="{{ url_for('accept_service', id=service.id) }}" method="POST">
+                                <button type="submit">Accept</button>
+                            </form>
+                            <form action="{{ url_for('reject_service', id=service.id) }}" method="POST">
+                                <button type="submit">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No requested services found.</p>
+    {% endif %}
+
+    <h2>Accepted Services</h2>
+    {% if accepted_services %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Customer Name</th>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for service in accepted_services %}
+                    <tr>
+                        <td>{{ service.service_name }}</td>
+                        <td>{{ service.customer_name }}</td>
+                        <td>{{ service.date_of_request }}</td>
+                        <td>{{ service.service_status }}</td>
+                        <td>
+                            <form action="{{ url_for('close_service', id=service.id) }}" method="POST">
+                                <button type="submit">Close Service</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No accepted services found.</p>
+    {% endif %}
+
+    <h2>Rejected Services</h2>
+    {% if rejected_services %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Customer Name</th>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for service in rejected_services %}
+                    <tr>
+                        <td>{{ service.service_name }}</td>
+                        <td>{{ service.customer_name }}</td>
+                        <td>{{ service.date_of_request }}</td>
+                        <td>{{ service.service_status }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No rejected services found.</p>
+    {% endif %}
+
+    <h2>Closed Services</h2>
+    {% if closed_services %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Customer Name</th>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for service in closed_services %}
+                    <tr>
+                        <td>{{ service.service_name }}</td>
+                        <td>{{ service.customer_name }}</td>
+                        <td>{{ service.date_of_request }}</td>
+                        <td>{{ service.service_status }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No closed services found.</p>
+    {% endif %}

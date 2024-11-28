@@ -1,0 +1,41 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+    <h2>Customer Search</h2>
+
+    <!-- Search Form -->
+    <form action="/customer/search" method="POST">
+        <div>
+            <label for="column_name">Select Column:</label>
+            <select id="column_name" name="column_name">
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="description">Description</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="search_text">Search Text:</label>
+            <input type="text" id="search_text" name="search_text" placeholder="Enter search text" required>
+        </div>
+        
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Search Results -->
+    {% if search_results %}
+        <h3>Search Results for "{{ search_category }}"</h3>
+        <ul>
+            {% for result in search_results %}
+                <li>
+                    <strong>ID:</strong> {{ result['id'] }} | 
+                    <strong>Name:</strong> {{ result['name'] }} | 
+                    <strong>Price:</strong> ${{ result['price'] }} | 
+                    <strong>Description:</strong> {{ result['description'] }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+{% endblock %}

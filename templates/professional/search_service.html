@@ -1,0 +1,43 @@
+{% extends 'professional/professional_dashboard.html' %}
+
+{% block content %}
+<h2>Search Service Requests</h2>
+
+<form method="POST">
+    <label for="column">Select Column:</label>
+    <select name="column" id="column">
+        {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+    </select>
+    
+    <label for="search_text">Search:</label>
+    <input type="text" name="search_text" id="search_text" required>
+    
+    <button type="submit">Search</button>
+</form>
+
+{% if results %}
+    <h3>Search Results</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Service Name</th>
+                <th>Customer Name</th>
+                <th>Request Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for service in results %}
+                <tr>
+                    <td>{{ service.service_name }}</td>
+                    <td>{{ service.customer_name }}</td>
+                    <td>{{ service.date_of_request }}</td>
+                    <td>{{ service.service_status }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+{% endblock %}

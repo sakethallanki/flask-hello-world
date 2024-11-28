@@ -306,3 +306,9 @@
 2024-11-27 17:17:26,686 - DEBUG - user
 2024-11-27 17:17:26,686 - DEBUG - jsfkld
 2024-11-27 17:17:26,687 - DEBUG - adsf
+2024-11-28 06:02:55,545 - DEBUG - outside the if codition
+2024-11-28 06:04:44,562 - DEBUG - outside the if codition
+2024-11-28 06:04:44,563 - DEBUG - inside the if codition
+2024-11-28 07:46:20,255 - DEBUG - outside the if codition
+2024-11-28 07:46:30,339 - DEBUG - outside the if codition
+2024-11-28 07:46:30,340 - DEBUG - inside the if codition

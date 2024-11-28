@@ -1,0 +1,60 @@
+{% extends 'customer/base.html' %}  
+
+{% block content %}  
+<h1>Welcome to Customer Dashboard</h1>  
+
+<h2>Best Cleaning Packages</h2>  
+<table>  
+    <tr>  
+        <th>ID</th>  
+        <th>Service Name</th>  
+        <th>Price</th>  
+        <th>Action</th>  
+    </tr>  
+    {% for service in services %}  
+    <tr>  
+        <td>{{ service.id }}</td>  
+        <td>{{ service.name }}</td>  
+        <td>${{ service.price }}</td>  
+        <!-- Add form to handle booking -->
+        <td>
+            <form method="POST" action="{{ url_for('book_service') }}">
+                <input type="hidden" name="service_id" value="{{ service.id }}">
+                <button type="submit">Book</button>
+            </form>
+        </td>  
+    </tr>  
+    {% endfor %}  
+</table>  
+
+<h2>Service History</h2>  
+<table>  
+    <tr>  
+        <th>ID</th>  
+        <th>Service Name</th>  
+        <th>Professional Name</th>  
+        <th>Status</th>  
+    </tr>  
+    {% for history in service_history %}  
+    <tr>  
+        <td>{{ history.id }}</td>  
+        <td>{{ history.service_name }}</td>  
+        <td>{{ history.professional_name }}</td>  
+        <td>{{ history.service_status }}</td>  
+    </tr>  
+    {% endfor %}  
+</table>  
+
+<h2>Service Remarks</h2>  
+<form method="POST" action="{{ url_for('submit_remark') }}">  
+    {{ form.hidden_tag() }}  
+    <label for="service_id">Select Service:</label>  
+    {{ form.service_id() }}<br>  
+    <label for="remarks">Remarks:</label>  
+    {{ form.remarks() }}<br>  
+    <label for="rating">Rating:</label>  
+    {{ form.rating() }}<br>  
+    {{ form.submit() }}  
+</form>  
+
+{% endblock %}

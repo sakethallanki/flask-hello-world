@@ -1,0 +1,9 @@
+{% extends 'professional/professional_dashboard.html' %}
+
+{% block content %}
+<h2>Summary Stats</h2>
+
+<!-- Display the Matplotlib chart as an image -->
+<img src="data:image/png;base64,{{ img_base64 }}" alt="Service Request Status Summary">
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Summary of Service Requests and Services</h2>
+
+    <!-- Display the plot -->
+    <h3>Services vs Service Requests</h3>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Plot">
+
+{% endblock %}
