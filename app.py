@@ -20,6 +20,7 @@ from werkzeug.utils import secure_filename
 import logging
 import os
 import matplotlib.pyplot as plt
+from flask import session
 
 app = Flask(__name__)  
 app.config['SECRET_KEY'] = 'your_secret_key'  # Replace with your own secret key  
@@ -463,6 +464,64 @@ def summary():
 def logout():
     # Implement logout logic
     return redirect(url_for('login'))  # Redirect to login page or appropriate page  
+
+@app.route('/professional/dashboard', methods=['GET'])
+def professional_dashboard():
+    user_id = session.get('user_id')  # Get logged-in user's ID
+    
+    conn = get_db_connection()
+    
+    # Get all services with status 'requested' for this professional
+    requested_services = conn.execute('''
+        SELECT * FROM service
+        WHERE professional_id = ? AND service_status = 'requested'
+    ''', (user_id,)).fetchall()
+    
+    # Get accepted services (for historical purposes)
+    accepted_services = conn.execute('''
+        SELECT * FROM service
+        WHERE professional_id = ? AND service_status = 'accepted'
+    ''', (user_id,)).fetchall()
+    
+    # Get rejected services
+    rejected_services = conn.execute('''
+        SELECT * FROM service
+        WHERE professional_id = ? AND service_status = 'rejected'
+    ''', (user_id,)).fetchall()
+    
+    # Get closed services (closed is only available for accepted services)
+    closed_services = conn.execute('''
+        SELECT * FROM service
+        WHERE professional_id = ? AND service_status = 'closed'
+    ''', (user_id,)).fetchall()
+    
+    conn.close()
+    
+    return render_template('professional_dashboard.html', requested_services=requested_services,
+                           accepted_services=accepted_services, rejected_services=rejected_services,
+                           closed_services=closed_services)
+
+@app.route('/close_service/<int:id>', methods=['POST'])
+def close_service(id):
+    conn = get_db_connection()
+    
+    # Check if the service is accepted before closing
+    service = conn.execute('SELECT service_status FROM service WHERE id = ?', (id,)).fetchone()
+    
+    if service and service['service_status'] == 'accepted':
+        # Update the service status to 'closed'
+        conn.execute('UPDATE service SET service_status = "closed" WHERE id = ?', (id,))
+        conn.commit()
+        flash('Service has been closed!', 'success')
+    else:
+        flash('Only accepted services can be closed.', 'danger')
+    
+    conn.close()
+    
+    return redirect(url_for('professional_dashboard'))
+
+
+
 
 if __name__ == "__main__":  
     app.run(debug=True)
