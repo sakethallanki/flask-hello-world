@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Search</h2>
+<div class="mb-3">
+    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-link">Home</a> |
+    <a href="{{ url_for('search') }}" class="btn btn-link">Search</a> |
+    <a href="{{ url_for('summary') }}" class="btn btn-link">Summary</a> |
+    <a href="{{ url_for('logout') }}" class="btn btn-link">Log out</a>
+</div>
+
+<h3>Search for Services or Professionals</h3>
+
+<!-- Search form -->
+<form method="POST">
+    <div class="form-group">
+        <label for="search_category">Search in:</label>
+        <select name="search_category" id="search_category" class="form-control">
+            <option value="service">Service</option>
+            <option value="professional">Professional</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="search_query">Search:</label>
+        <input type="text" name="search_query" id="search_query" class="form-control" placeholder="Enter search term" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+{% if search_results %}
+    <h4>Search Results</h4>
+    {% if search_category == 'service' %}
+        <h5>Services</h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for service in search_results %}
+                <tr>
+                    <td>{{ service[0] }}</td>
+                    <td>{{ service[1] }}</td>
+                    <td>{{ service[2] }}</td>
+                    <td>{{ service[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% elif search_category == 'professional' %}
+        <h5>Professionals</h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Experience</th>
+                    <th>Service Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for professional in search_results %}
+                <tr>
+                    <td>{{ professional[0] }}</td>
+                    <td>{{ professional[1] }}</td>
+                    <td>{{ professional[2] }}</td>
+                    <td>{{ professional[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endif %}
+{% endblock %}

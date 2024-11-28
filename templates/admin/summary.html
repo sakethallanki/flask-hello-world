@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Summary</h2>
+<div class="mb-3">
+    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-link">Home</a> |
+    <a href="{{ url_for('search') }}" class="btn btn-link">Search</a> |
+    <a href="{{ url_for('summary') }}" class="btn btn-link">Summary</a> |
+    <a href="{{ url_for('logout') }}" class="btn btn-link">Log out</a>
+</div>
+
+<h3>Statistical Data</h3>
+
+<!-- Example for displaying counts -->
+<p>Total Services: {{ service_count }}</p>
+<p>Total Professionals: {{ professional_count }}</p>
+
+<!-- Plot display -->
+<h4>Service Distribution</h4>
+<img src="{{ url_for('static', filename='images/service_plot.png') }}" alt="Service Distribution Plot">
+{% endblock %}

@@ -1,0 +1,48 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  
+    <title>User Registration</title>  
+    <style>
+        /* Custom CSS to align the link at the middle-right of the page */
+        .right-middle-link {
+            position: fixed; /* Fix the position */
+            top: 50%; /* Center vertically */
+            right: 20px; /* Space from the right */
+            transform: translateY(-50%); /* Adjust for exact centering */
+            background-color: rgba(0, 0, 0, 0.2); /* Optional: background for contrast */
+            padding: 10px; /* Padding for the link */
+            border-radius: 5px; /* Rounded corners */
+        }
+    </style>
+</head>  
+<body>
+{% extends 'base.html' %}  
+{% block content %}
+<div class="container mt-4">  
+<h2>Login</h2>  
+<form method="POST">  
+    <p>  
+        <label for="username">Username</label><br>  
+        <input type="text" name="username" required>  
+    </p>  
+    <p>  
+        <label for="password">Password</label><br>  
+        <input type="password" name="password" required>  
+    </p>  
+    <p><input type="submit" value="Login"></p>  
+</form>  
+<div class="mt-3">  
+    <a href="{{ url_for('customersignup') }}">Don't have an account? Create one.</a>  
+</div>
+
+<div class="right-middle-link">  
+    <a href="{{ url_for('professionalsignup') }}">Want to Register as service professional? Click here.</a>  
+</div>
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,308 @@
+2024-11-27 10:52:53,407 - DEBUG - outside the if codition
+
+2024-11-27 11:00:33,940 - DEBUG - outside the if codition
+2024-11-27 11:00:41,331 - DEBUG - outside the if codition
+2024-11-27 11:00:41,332 - DEBUG - inside the if codition
+2024-11-27 11:04:55,403 - DEBUG - outside the if codition
+2024-11-27 11:05:08,996 - DEBUG - outside the if codition
+2024-11-27 11:05:08,996 - DEBUG - inside the if codition
+2024-11-27 11:06:10,542 - DEBUG - outside the if codition
+2024-11-27 11:06:16,534 - DEBUG - outside the if codition
+2024-11-27 11:06:16,535 - DEBUG - inside the if codition
+2024-11-27 11:08:12,035 - DEBUG - outside the if codition
+2024-11-27 11:08:28,778 - DEBUG - outside the if codition
+2024-11-27 11:08:28,778 - DEBUG - inside the if codition
+2024-11-27 11:09:11,361 - DEBUG - outside the if codition
+2024-11-27 11:09:32,498 - DEBUG - outside the if codition
+2024-11-27 11:09:32,498 - DEBUG - inside the if codition
+2024-11-27 12:03:51,084 - DEBUG - ousite profe condition
+2024-11-27 12:04:26,089 - DEBUG - ousite profe condition
+2024-11-27 12:28:43,963 - DEBUG - ousite profe condition
+2024-11-27 12:29:27,018 - DEBUG - ousite profe condition
+2024-11-27 12:29:27,018 - DEBUG - inside profe condition
+2024-11-27 12:29:27,018 - DEBUG - gonna save file inside profe condition
+2024-11-27 12:36:21,998 - DEBUG - ousite profe condition
+2024-11-27 12:37:05,566 - DEBUG - ousite profe condition
+2024-11-27 12:37:05,567 - DEBUG - inside profe condition
+2024-11-27 12:37:05,567 - DEBUG - gonna save file inside profe condition
+2024-11-27 12:46:29,740 - DEBUG - ousite profe condition
+2024-11-27 12:47:21,966 - DEBUG - ousite profe condition
+2024-11-27 12:47:21,966 - DEBUG - inside profe condition
+2024-11-27 12:47:21,967 - DEBUG - gonna save file inside profe condition
+2024-11-27 12:49:02,304 - DEBUG - ousite profe condition
+2024-11-27 12:49:34,275 - DEBUG - ousite profe condition
+2024-11-27 12:49:34,275 - DEBUG - inside profe condition
+2024-11-27 12:49:34,275 - DEBUG - gonna save file inside profe condition
+2024-11-27 12:51:48,386 - DEBUG - ousite profe condition
+2024-11-27 12:52:18,101 - DEBUG - ousite profe condition
+2024-11-27 12:52:18,101 - DEBUG - inside profe condition
+2024-11-27 12:52:18,102 - DEBUG - gonna save file inside profe condition
+2024-11-27 12:52:18,102 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 12:52:18,102 - DEBUG - to save in table
+2024-11-27 12:54:30,440 - DEBUG - ousite profe condition
+2024-11-27 12:55:02,813 - DEBUG - ousite profe condition
+2024-11-27 12:55:02,814 - DEBUG - inside profe condition
+2024-11-27 12:55:02,814 - DEBUG - gonna save file inside profe condition
+2024-11-27 12:55:02,814 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 12:55:02,814 - DEBUG - to save in table
+2024-11-27 12:58:48,380 - DEBUG - ousite profe condition
+2024-11-27 12:59:48,097 - DEBUG - ousite profe condition
+2024-11-27 13:00:20,894 - DEBUG - ousite profe condition
+2024-11-27 13:00:20,894 - DEBUG - inside profe condition
+2024-11-27 13:00:20,895 - DEBUG - gonna save file inside profe condition
+2024-11-27 13:00:20,895 - DEBUG - Username: user3@gmai.com
+2024-11-27 13:00:20,895 - DEBUG - Password: user3
+2024-11-27 13:00:20,895 - DEBUG - Fullname: user3
+2024-11-27 13:00:20,895 - DEBUG - Description: you
+2024-11-27 13:00:20,895 - DEBUG - Pincode: 452369
+2024-11-27 13:00:20,895 - DEBUG - Servicename: service1
+2024-11-27 13:01:42,877 - DEBUG - ousite profe condition
+2024-11-27 13:02:15,179 - DEBUG - ousite profe condition
+2024-11-27 13:02:15,179 - DEBUG - inside profe condition
+2024-11-27 13:02:15,179 - DEBUG - gonna save file inside profe condition
+2024-11-27 13:02:15,179 - DEBUG - Username: user3@gmail.com
+2024-11-27 13:02:15,179 - DEBUG - Password: user3
+2024-11-27 13:02:15,179 - DEBUG - Fullname: user3
+2024-11-27 13:02:15,180 - DEBUG - Description: user
+2024-11-27 13:02:15,180 - DEBUG - Pincode: 523602
+2024-11-27 13:02:15,180 - DEBUG - Servicename: service1
+2024-11-27 13:02:15,180 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 13:02:15,180 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 13:02:15,180 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 13:02:15,180 - DEBUG - to save in table
+2024-11-27 13:07:29,256 - DEBUG - ousite profe condition
+2024-11-27 13:08:06,309 - DEBUG - ousite profe condition
+2024-11-27 13:08:06,310 - DEBUG - inside profe condition
+2024-11-27 13:08:06,310 - DEBUG - gonna save file inside profe condition
+2024-11-27 13:08:06,310 - DEBUG - Username: user3@gmail.com
+2024-11-27 13:08:06,310 - DEBUG - Password: user3
+2024-11-27 13:08:06,310 - DEBUG - Fullname: user3
+2024-11-27 13:08:06,310 - DEBUG - Description: user
+2024-11-27 13:08:06,310 - DEBUG - Pincode: 425639
+2024-11-27 13:08:06,310 - DEBUG - Servicename: service2 and type: <class 'str'>
+2024-11-27 13:08:06,310 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 13:08:06,311 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 13:08:06,311 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 13:08:06,311 - DEBUG - to save in table
+2024-11-27 13:10:22,667 - DEBUG - ousite profe condition
+2024-11-27 13:14:21,307 - DEBUG - ousite profe condition
+2024-11-27 13:14:36,738 - DEBUG - ousite profe condition
+2024-11-27 13:18:47,420 - DEBUG - ousite profe condition
+2024-11-27 13:19:21,184 - DEBUG - ousite profe condition
+2024-11-27 13:19:21,184 - DEBUG - inside profe condition
+2024-11-27 13:19:21,184 - DEBUG - gonna save file inside profe condition
+2024-11-27 13:19:21,184 - DEBUG - Username: user3@gmail.com
+2024-11-27 13:19:21,184 - DEBUG - Password: user
+2024-11-27 13:19:21,184 - DEBUG - Fullname: user 3
+2024-11-27 13:19:21,184 - DEBUG - Description: user
+2024-11-27 13:19:21,184 - DEBUG - Pincode: 652356
+2024-11-27 13:19:21,184 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-27 13:19:21,184 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 13:19:21,185 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 13:19:21,185 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 13:19:21,185 - DEBUG - to save in table
+2024-11-27 13:19:21,214 - DEBUG - saved in table
+2024-11-27 15:01:25,361 - DEBUG - outside the if codition
+2024-11-27 15:01:39,746 - DEBUG - outside the if codition
+2024-11-27 15:01:39,746 - DEBUG - inside the if codition
+2024-11-27 15:01:47,092 - DEBUG - outside the if codition
+2024-11-27 15:02:01,299 - DEBUG - outside the if codition
+2024-11-27 15:02:01,299 - DEBUG - inside the if codition
+2024-11-27 15:13:25,458 - DEBUG - ousite profe condition
+2024-11-27 15:14:54,586 - DEBUG - ousite profe condition
+2024-11-27 15:14:54,586 - DEBUG - inside profe condition
+2024-11-27 15:14:54,586 - DEBUG - gonna save file inside profe condition
+2024-11-27 15:14:54,586 - DEBUG - Username: user3@gmail.com
+2024-11-27 15:14:54,586 - DEBUG - Password: user3
+2024-11-27 15:14:54,586 - DEBUG - Fullname: user3
+2024-11-27 15:14:54,586 - DEBUG - Description: hyd
+2024-11-27 15:14:54,587 - DEBUG - Pincode: 502445
+2024-11-27 15:14:54,587 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-27 15:14:54,587 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 15:14:54,587 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 15:14:54,587 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 15:14:54,587 - DEBUG - to save in table
+2024-11-27 15:15:38,182 - DEBUG - ousite profe condition
+2024-11-27 15:16:10,379 - DEBUG - ousite profe condition
+2024-11-27 15:16:10,379 - DEBUG - inside profe condition
+2024-11-27 15:16:10,379 - DEBUG - gonna save file inside profe condition
+2024-11-27 15:16:10,379 - DEBUG - Username: user3@gmail.com
+2024-11-27 15:16:10,380 - DEBUG - Password: user3
+2024-11-27 15:16:10,380 - DEBUG - Fullname: user3
+2024-11-27 15:16:10,380 - DEBUG - Description: hyd
+2024-11-27 15:16:10,380 - DEBUG - Pincode: 502116
+2024-11-27 15:16:10,380 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-27 15:16:10,380 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 15:16:10,380 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 15:16:10,381 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 15:16:10,381 - DEBUG - to save in table
+2024-11-27 15:16:34,812 - DEBUG - ousite profe condition
+2024-11-27 15:17:10,436 - DEBUG - ousite profe condition
+2024-11-27 15:17:10,437 - DEBUG - inside profe condition
+2024-11-27 15:17:10,437 - DEBUG - gonna save file inside profe condition
+2024-11-27 15:17:10,437 - DEBUG - Username: user@gmail.com
+2024-11-27 15:17:10,437 - DEBUG - Password: user3
+2024-11-27 15:17:10,437 - DEBUG - Fullname: user3
+2024-11-27 15:17:10,437 - DEBUG - Description: hyd
+2024-11-27 15:17:10,437 - DEBUG - Pincode: 502365
+2024-11-27 15:17:10,437 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-27 15:17:10,437 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 15:17:10,437 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 15:17:10,437 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 15:17:10,438 - DEBUG - to save in table
+2024-11-27 15:17:10,470 - DEBUG - saved in table
+2024-11-27 15:22:14,472 - DEBUG - ousite profe condition
+2024-11-27 15:23:16,028 - DEBUG - ousite profe condition
+2024-11-27 15:23:16,028 - DEBUG - inside profe condition
+2024-11-27 15:23:16,028 - DEBUG - gonna save file inside profe condition
+2024-11-27 15:23:16,028 - DEBUG - Username: user3@gmail.com
+2024-11-27 15:23:16,028 - DEBUG - Password: user3
+2024-11-27 15:23:16,028 - DEBUG - Fullname: user3
+2024-11-27 15:23:16,028 - DEBUG - Description: hyd
+2024-11-27 15:23:16,028 - DEBUG - Pincode: 502136
+2024-11-27 15:23:16,028 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-27 15:23:16,028 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 15:23:16,029 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 15:23:16,029 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 15:23:16,029 - DEBUG - to save in table
+2024-11-27 15:27:46,896 - DEBUG - ousite profe condition
+2024-11-27 15:28:21,062 - DEBUG - ousite profe condition
+2024-11-27 15:28:21,062 - DEBUG - inside profe condition
+2024-11-27 15:28:21,063 - DEBUG - gonna save file inside profe condition
+2024-11-27 15:28:21,063 - DEBUG - Username: user3@gmail.com
+2024-11-27 15:28:21,063 - DEBUG - Password: user3
+2024-11-27 15:28:21,063 - DEBUG - Fullname: user3
+2024-11-27 15:28:21,063 - DEBUG - Description: hdsyf
+2024-11-27 15:28:21,063 - DEBUG - Pincode: 456256
+2024-11-27 15:28:21,063 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-27 15:28:21,064 - DEBUG - File upload: <FileStorage: 'Invoice_23893968449.PDF' ('application/pdf')>
+2024-11-27 15:28:21,064 - DEBUG - The path of file is: uploads/Invoice_23893968449.PDF
+2024-11-27 15:28:21,064 - DEBUG - File name: Invoice_23893968449.PDF
+2024-11-27 15:28:21,064 - DEBUG - to save in table
+2024-11-27 15:28:21,125 - DEBUG - saved in table
+2024-11-27 15:34:02,369 - DEBUG - <sqlite3.Row object at 0x7f9b8cd9ffa0>
+2024-11-27 15:34:02,370 - DEBUG - <sqlite3.Row object at 0x7f9b8cbec0a0>
+2024-11-27 15:34:05,167 - DEBUG - <sqlite3.Row object at 0x7f9b8cc247f0>
+2024-11-27 15:34:05,167 - DEBUG - <sqlite3.Row object at 0x7f9b8cc246d0>
+2024-11-27 15:35:19,860 - DEBUG - user3
+2024-11-27 15:35:19,860 - DEBUG - user3
+2024-11-27 15:37:45,760 - DEBUG - user3
+2024-11-27 15:37:45,760 - DEBUG - user3
+2024-11-27 15:38:04,990 - DEBUG - outside the if codition
+2024-11-27 15:38:14,253 - DEBUG - outside the if codition
+2024-11-27 15:38:14,253 - DEBUG - inside the if codition
+2024-11-27 15:38:14,302 - DEBUG - user3
+2024-11-27 15:38:14,302 - DEBUG - user3
+2024-11-27 15:40:24,847 - DEBUG - user3
+2024-11-27 15:40:24,848 - DEBUG - user3
+2024-11-27 15:41:13,087 - DEBUG - user
+2024-11-27 15:41:13,087 - DEBUG - user3
+2024-11-27 15:41:20,544 - DEBUG - user3
+2024-11-27 16:16:22,200 - DEBUG - user3
+2024-11-27 16:16:28,289 - DEBUG - user3
+2024-11-27 16:16:32,622 - DEBUG - user3
+2024-11-27 16:16:35,826 - DEBUG - outside the if codition
+2024-11-27 16:16:45,124 - DEBUG - outside the if codition
+2024-11-27 16:16:45,124 - DEBUG - inside the if codition
+2024-11-27 16:16:45,167 - DEBUG - user3
+2024-11-27 16:17:00,441 - DEBUG - user3
+2024-11-27 16:32:13,851 - DEBUG - user3
+2024-11-27 16:32:34,280 - DEBUG - user3
+2024-11-27 16:33:28,135 - DEBUG - user3
+2024-11-27 16:33:33,784 - DEBUG - user3
+2024-11-27 16:44:50,650 - DEBUG - user3
+2024-11-27 16:46:24,271 - DEBUG - user3
+2024-11-27 16:56:52,581 - DEBUG - outside the if codition
+2024-11-27 16:57:02,283 - DEBUG - ousite profe condition
+2024-11-27 17:00:09,222 - DEBUG - ousite profe condition
+2024-11-27 17:00:09,223 - DEBUG - inside profe condition
+2024-11-27 17:00:09,223 - DEBUG - gonna save file inside profe condition
+2024-11-27 17:00:09,223 - DEBUG - Username: professinal1@gmail.com
+2024-11-27 17:00:09,223 - DEBUG - Password: user
+2024-11-27 17:00:09,223 - DEBUG - Fullname: user
+2024-11-27 17:00:09,223 - DEBUG - Description: jko458963
+2024-11-27 17:00:09,223 - DEBUG - Pincode: 125638
+2024-11-27 17:00:09,223 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-27 17:00:09,224 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 17:00:09,225 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 17:00:09,225 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 17:00:09,225 - DEBUG - to save in table
+2024-11-27 17:00:09,275 - DEBUG - saved in table
+2024-11-27 17:00:15,320 - DEBUG - user
+2024-11-27 17:00:24,714 - DEBUG - user
+2024-11-27 17:00:34,010 - DEBUG - user
+2024-11-27 17:00:38,180 - DEBUG - user
+2024-11-27 17:07:52,265 - DEBUG - user
+2024-11-27 17:08:00,401 - DEBUG - ousite profe condition
+2024-11-27 17:08:36,081 - DEBUG - ousite profe condition
+2024-11-27 17:08:36,081 - DEBUG - inside profe condition
+2024-11-27 17:08:36,081 - DEBUG - gonna save file inside profe condition
+2024-11-27 17:08:36,082 - DEBUG - Username: user3@gmail.com
+2024-11-27 17:08:36,082 - DEBUG - Password: hdsf;,n
+2024-11-27 17:08:36,082 - DEBUG - Fullname: jsfkld
+2024-11-27 17:08:36,082 - DEBUG - Description: fghj
+2024-11-27 17:08:36,082 - DEBUG - Pincode: 256389
+2024-11-27 17:08:36,082 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-27 17:08:36,082 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 17:08:36,082 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 17:08:36,082 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 17:08:36,082 - DEBUG - to save in table
+2024-11-27 17:08:36,139 - DEBUG - saved in table
+2024-11-27 17:08:40,720 - DEBUG - user
+2024-11-27 17:08:40,720 - DEBUG - jsfkld
+2024-11-27 17:09:35,035 - DEBUG - user
+2024-11-27 17:09:35,036 - DEBUG - jsfkld
+2024-11-27 17:10:10,172 - DEBUG - user
+2024-11-27 17:10:10,173 - DEBUG - jsfkld
+2024-11-27 17:10:14,628 - DEBUG - user
+2024-11-27 17:10:14,628 - DEBUG - jsfkld
+2024-11-27 17:12:42,143 - DEBUG - user
+2024-11-27 17:12:42,143 - DEBUG - jsfkld
+2024-11-27 17:13:04,080 - DEBUG - ousite profe condition
+2024-11-27 17:13:47,185 - DEBUG - ousite profe condition
+2024-11-27 17:13:47,186 - DEBUG - inside profe condition
+2024-11-27 17:13:47,186 - DEBUG - gonna save file inside profe condition
+2024-11-27 17:13:47,186 - DEBUG - Username: userr@kjfalds.fjkdl
+2024-11-27 17:13:47,186 - DEBUG - Password: sdjfakl;
+2024-11-27 17:13:47,186 - DEBUG - Fullname: adsf
+2024-11-27 17:13:47,186 - DEBUG - Description: ghj2563
+2024-11-27 17:13:47,186 - DEBUG - Pincode: 125890
+2024-11-27 17:13:47,186 - DEBUG - Servicename: service1 and type: <class 'str'>
+2024-11-27 17:13:47,186 - DEBUG - File upload: <FileStorage: 'Invoice_24262651829.pdf' ('application/pdf')>
+2024-11-27 17:13:47,186 - DEBUG - The path of file is: uploads/Invoice_24262651829.pdf
+2024-11-27 17:13:47,187 - DEBUG - File name: Invoice_24262651829.pdf
+2024-11-27 17:13:47,187 - DEBUG - to save in table
+2024-11-27 17:13:47,227 - DEBUG - saved in table
+2024-11-27 17:13:51,374 - DEBUG - user
+2024-11-27 17:13:51,374 - DEBUG - jsfkld
+2024-11-27 17:13:51,374 - DEBUG - adsf
+2024-11-27 17:15:07,890 - DEBUG - user
+2024-11-27 17:15:07,890 - DEBUG - jsfkld
+2024-11-27 17:15:07,890 - DEBUG - adsf
+2024-11-27 17:15:30,769 - DEBUG - user
+2024-11-27 17:15:30,769 - DEBUG - jsfkld
+2024-11-27 17:15:30,769 - DEBUG - adsf
+2024-11-27 17:15:42,076 - DEBUG - user
+2024-11-27 17:15:42,076 - DEBUG - jsfkld
+2024-11-27 17:15:42,076 - DEBUG - adsf
+2024-11-27 17:15:55,168 - DEBUG - user
+2024-11-27 17:15:55,168 - DEBUG - jsfkld
+2024-11-27 17:15:55,168 - DEBUG - adsf
+2024-11-27 17:15:57,615 - DEBUG - user
+2024-11-27 17:15:57,615 - DEBUG - jsfkld
+2024-11-27 17:15:57,616 - DEBUG - adsf
+2024-11-27 17:16:14,065 - DEBUG - user
+2024-11-27 17:16:14,065 - DEBUG - jsfkld
+2024-11-27 17:16:14,065 - DEBUG - adsf
+2024-11-27 17:16:21,779 - DEBUG - user
+2024-11-27 17:16:21,779 - DEBUG - jsfkld
+2024-11-27 17:16:21,779 - DEBUG - adsf
+2024-11-27 17:17:03,185 - DEBUG - user
+2024-11-27 17:17:03,185 - DEBUG - jsfkld
+2024-11-27 17:17:03,185 - DEBUG - adsf
+2024-11-27 17:17:11,675 - DEBUG - user
+2024-11-27 17:17:11,675 - DEBUG - jsfkld
+2024-11-27 17:17:11,675 - DEBUG - adsf
+2024-11-27 17:17:26,686 - DEBUG - user
+2024-11-27 17:17:26,686 - DEBUG - jsfkld
+2024-11-27 17:17:26,687 - DEBUG - adsf
